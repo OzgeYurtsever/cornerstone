@@ -77,6 +77,7 @@ function getRenderCanvas (enabledElement, image, invalidated) {
   // NOTE: This might be inefficient if we are updating multiple images of different
   // Sizes frequently.
   if (renderCanvas.width !== image.width || renderCanvas.height !== image.height) {
+    console.log(' ---> initializeRenderCanvas in renderColorImage')
     initializeRenderCanvas(enabledElement, image);
   }
 

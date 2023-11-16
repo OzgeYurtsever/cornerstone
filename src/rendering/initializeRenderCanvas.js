@@ -8,8 +8,10 @@
  */
 export default function (enabledElement, image) {
   const renderCanvas = enabledElement.renderingTools.renderCanvas;
+  console.log(enabledElement.renderingTools)
 
   console.log("----> image");
+  console.log(image);
   console.log(" ---> image.width", image.width);
   console.log(" ---> image.height", image.height);
   

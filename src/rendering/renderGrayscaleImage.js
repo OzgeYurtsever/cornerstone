@@ -26,6 +26,7 @@ function getRenderCanvas (enabledElement, image, invalidated, useAlphaChannel = 
 
   if (!enabledElement.renderingTools.renderCanvas || canvasWasColor) {
     enabledElement.renderingTools.renderCanvas = document.createElement('canvas');
+    console.log(' ---> initializeRenderCanvas in renderGrayscale 1')
     initializeRenderCanvas(enabledElement, image);
   }
 
@@ -39,6 +40,7 @@ function getRenderCanvas (enabledElement, image, invalidated, useAlphaChannel = 
   // NOTE: This might be inefficient if we are updating multiple images of different
   // Sizes frequently.
   if (renderCanvas.width !== image.width || renderCanvas.height !== image.height) {
+    console.log(' ---> initializeRenderCanvas in renderGrayscale 2')
     initializeRenderCanvas(enabledElement, image);
   }
 
